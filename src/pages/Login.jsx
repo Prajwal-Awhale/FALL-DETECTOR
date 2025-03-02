@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -12,7 +13,10 @@ const Login = () => {
         </h2>
         <form className="space-y-6 ">
           <div className="relative shadow-xl">
-            <label htmlFor="email" className="block text-base font-medium text-gray-700">
+            <label
+              htmlFor="email"
+              className="block text-base font-medium text-gray-700"
+            >
               Email Address
             </label>
             <input
@@ -24,7 +28,10 @@ const Login = () => {
             />
           </div>
           <div className="relative shadow-xl">
-            <label htmlFor="password" className="block text-base font-medium text-gray-700">
+            <label
+              htmlFor="password"
+              className="block text-base font-medium text-gray-700"
+            >
               Password
             </label>
             <input
@@ -43,12 +50,23 @@ const Login = () => {
             </button>
           </div>
           <div className="flex items-center justify-between">
-            
             <div>
-              <a href="#" className="text-sm text-indigo-600 hover:text-indigo-500">
+              <a
+                href="#"
+                className="text-sm text-indigo-600 hover:text-indigo-500"
+              >
                 Forgot password?
               </a>
             </div>
+          </div>
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-sm text-gray-700"></span>
+            <Link
+              to="/signup"
+              className="text-lg text-indigo-600 hover:text-indigo-500 font-medium"
+            >
+              Create Account
+            </Link>
           </div>
           <div>
             <button
