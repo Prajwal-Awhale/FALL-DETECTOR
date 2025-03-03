@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-
+const nav=useNavigate();
   return (
-    <div className="min-h-[500px] flex items-center justify-center bg-gray-100 px-4 rounded-lg shadow-2xl">
+    <div className="min-h-[500px] flex items-center justify-center bg-gray-100 px-4 rounded-lg shadow-2xl  border-4 border-indigo-200 border-b-indigo-500  ">
       <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-2xl">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
           Login to Your Account
@@ -69,7 +69,7 @@ const Login = () => {
             </Link>
           </div>
           <div>
-            <button
+            <button  onClick={()=>{nav("/dashboard")}}
               type="submit"
               className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg shadow-md transition duration-200"
             >

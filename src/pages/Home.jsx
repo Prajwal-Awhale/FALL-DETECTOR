@@ -1,15 +1,18 @@
-import { Link } from "react-router-dom";
-export default function Home() {
+import React from 'react'
+import Header from '../Sections/Header'
+import Hero from '../Sections/Hero'
+import HowWork from '../Sections/HowWork'
+import Footer from '../Sections/Footer'
+const Home = () => {
   return (
-    <>
-      <div>
-        <h1>THIS IS HOME PAGE</h1>
-        <h2>progress so far </h2>
-        <Link to="./login">LOGIN PAGE</Link>
-      </div>
-      <div className="text">
-        <Link to="./signup">Signup PAGE</Link>
-      </div>
-    </>
-  );
+    <div>
+
+      <Header/>
+      <Hero/>
+      <HowWork/>
+      <Footer/>
+    </div>
+  )
 }
+
+export default Home

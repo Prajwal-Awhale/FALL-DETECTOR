@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Eye, EyeOff } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
+  const nav=useNavigate();
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -19,7 +21,7 @@ const Signup = () => {
     } else {
       setError("");
       alert("Signup successful!");
-      // Perform signup logic here
+      
     }
   };
 
@@ -86,7 +88,7 @@ const Signup = () => {
           {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
 
           <div>
-            <button
+            <button onClick={()=>{nav("/login")}}
               type="submit"
               className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-4 rounded-md transition duration-200 shadow-xl"
             >
@@ -95,12 +97,7 @@ const Signup = () => {
           </div>
         </form>
 
-        <div className="mt-4 text-center">
-          <span className="text-lg text-gray-700">Already have an account? </span>
-          <Link to="/login" className="text-lg text-indigo-600 hover:text-indigo-500 font-medium">
-            Login here
-          </Link>
-        </div>
+        
       </div>
     </div>
   );

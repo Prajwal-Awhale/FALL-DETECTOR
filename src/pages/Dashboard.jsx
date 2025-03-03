@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import Sidebar from "../pages/Sidebar"; 
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
-  return (
-    <div>This is dashboard field</div>
-  )
-}
+  const navigate = useNavigate();
 
-export default Dashboard
+  return (
+    <div className="flex w-screen">
+      <Sidebar />
+      <div className="flex-1 ">
+        <h1 className="text-3xl font-bold">Welcome to Dashboard</h1>
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;
