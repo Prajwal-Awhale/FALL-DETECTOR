@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link ,useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 const Header = () => {
   const nav=useNavigate();
   return (
     <div className="container w-full">
-    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-4 py-3 w-full shadow-2xl">
+    <header className="flex items-center justify-between whitespace-nowrap h-[10vh] border-b border-solid border-b-[#f0f2f5] px-4 py-3 w-full shadow-2xl">
       <div className="flex items-center gap-2 text-[#111518]">
         <div className="size-4">
           <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,11 +27,7 @@ const Header = () => {
         </h2>
       </div>
       <div className="flex flex-1 items-center justify-end gap-4">
-        <nav className="flex items-center gap-4">
-          <Link className="text-[#111518] text-sm font-medium leading-normal px-2" to="#">
-            About
-          </Link>
-        </nav>
+      
         <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#000000] text-white text-sm font-bold leading-normal tracking-[0.015em]">
         <span className="truncate" onClick={()=>{nav("/login")}}>Log in</span>        </button>
       </div>

@@ -1,18 +1,15 @@
-import React from 'react'
-import Header from '../Sections/Header'
-import Hero from '../Sections/Hero'
-import HowWork from '../Sections/HowWork'
-import Footer from '../Sections/Footer'
+import React from "react";
+
+import Hero from "../Sections/Hero";
+import HowWork from "../Sections/HowWork";
+
 const Home = () => {
   return (
     <div>
-
-      <Header/>
-      <Hero/>
-      <HowWork/>
-      <Footer/>
+      <Hero />
+      <HowWork />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

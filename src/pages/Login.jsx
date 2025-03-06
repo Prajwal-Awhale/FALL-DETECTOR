@@ -6,7 +6,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 const nav=useNavigate();
   return (
-    <div className="min-h-[500px] flex items-center justify-center bg-gray-100 px-4 rounded-lg shadow-2xl  border-4 border-indigo-200 border-b-indigo-500  ">
+    <div className=" mt-7 items-center justify-center flex h-[60vh] flex-col  bg-gray-100 px-4 rounded-lg shadow-2xl  border-4 border-indigo-200 border-b-indigo-500  ">
       <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-2xl">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
           Login to Your Account
@@ -43,7 +43,7 @@ const nav=useNavigate();
             />
             <button
               type="button"
-              className="absolute right-3 top-10 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+              className=" flex absolute right-3 top-13 transform -translate-y-1/2 "
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}

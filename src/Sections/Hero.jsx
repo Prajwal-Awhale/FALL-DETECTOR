@@ -11,7 +11,7 @@ const HeroSection = () => {
           "
           style={{
             backgroundImage:
-              'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://cdn.usegalileo.ai/sdxl10/173148b8-3f5e-4fd0-ae95-8a36a3aa89a4.png")',
+              'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://api.deepai.org/job-view-file/7dfceef4-9331-4a64-945f-fc4e135058ef/outputs/output.jpg")',
           }}
         >
           <div className="flex flex-col gap-2 text-left">

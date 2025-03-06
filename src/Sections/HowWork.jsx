@@ -6,7 +6,7 @@ const HowWork = () => {
       <h1 className="text-[#111518] tracking-light text-[32px] shadow-2xl font-bold  leading-tight @[480px]:text-4xl max-w-[720px]">
         How it works
       </h1>
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] px-7 gap-3">
         {/* Card 1 */}
         <div className="flex flex-col gap-3 pb-3">
           <div
@@ -21,7 +21,7 @@ const HowWork = () => {
               How it works
             </p>
             <p className="text-[#60778a] text-sm font-normal leading-normal">
-              The InCare Home Monitor uses a combination of sensors and AI to detect falls. It&apos;s designed to be easy to set up and use, and can be installed in any home.
+              The BalanceGuard  uses a combination of sensors and AI to detect falls. It&apos;s designed to be easy to set up and use, and can be installed in any home.
             </p>
           </div>
         </div>
@@ -39,7 +39,7 @@ const HowWork = () => {
               Who it&apos;s for
             </p>
             <p className="text-[#60778a] text-sm font-normal leading-normal">
-              The InCare Home Monitor is designed for seniors who want to live independently and their families. It can also be used in assisted living facilities and other care settings.
+              The  BalanceGuard is designed for seniors who want to live independently and their families. It can also be used in assisted living facilities and other care settings.
             </p>
           </div>
         </div>
