@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-const nav=useNavigate();
+  const nav = useNavigate();
+
   return (
-    <div className=" mt-7 items-center justify-center flex h-[60vh] flex-col  bg-gray-100 px-4 rounded-lg shadow-2xl  border-4 border-indigo-200 border-b-indigo-500  ">
-      <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-2xl">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+    // Hero section set to 60% of the viewport height
+    <div className="flex items-center mt-5 justify-center h-[60vh] bg-gray-100">
+      <div className="w-full max-w-md bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-2 border-indigo-300 mx-4">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
           Login to Your Account
         </h2>
-        <form className="space-y-6 ">
-          <div className="relative shadow-xl">
+        <form className="space-y-4">
+          <div className="relative">
             <label
               htmlFor="email"
-              className="block text-base font-medium text-gray-700"
+              className="block text-sm sm:text-base font-medium text-gray-700"
             >
               Email Address
             </label>
@@ -27,10 +29,10 @@ const nav=useNavigate();
               className="mt-2 block w-full border border-gray-300 rounded-lg py-2 px-3 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
-          <div className="relative shadow-xl">
+          <div className="relative">
             <label
               htmlFor="password"
-              className="block text-base font-medium text-gray-700"
+              className="block text-sm sm:text-base font-medium text-gray-700"
             >
               Password
             </label>
@@ -43,33 +45,28 @@ const nav=useNavigate();
             />
             <button
               type="button"
-              className=" flex absolute right-3 top-13 transform -translate-y-1/2 "
+              className="absolute right-3 top-10 transform -translate-y-1/2"
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
             </button>
           </div>
           <div className="flex items-center justify-between">
-            <div>
-              <a
-                href="#"
-                className="text-sm text-indigo-600 hover:text-indigo-500"
-              >
-                Forgot password?
-              </a>
-            </div>
+            <a href="#" className="text-xs sm:text-sm text-indigo-600 hover:text-indigo-500">
+              Forgot password?
+            </a>
           </div>
-          <div className="flex items-center justify-between text-sm">
-            <span className="text-sm text-gray-700"></span>
+          <div className="flex justify-between items-center text-xs sm:text-sm">
             <Link
               to="/signup"
-              className="text-lg text-indigo-600 hover:text-indigo-500 font-medium"
+              className="text-sm sm:text-lg text-indigo-600 hover:text-indigo-500 font-medium"
             >
               Create Account
             </Link>
           </div>
-          <div>
-            <button  onClick={()=>{nav("/dashboard")}}
+          <div className="mt-2">
+            <button
+              onClick={() => nav("/dashboard")}
               type="submit"
               className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg shadow-md transition duration-200"
             >

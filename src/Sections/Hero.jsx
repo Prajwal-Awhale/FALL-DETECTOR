@@ -7,13 +7,19 @@ const HeroSection = () => {
         <div
           className="
             flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat 
-            md:gap-8 md:rounded-xl items-start justify-end px-4 pb-10 md:px-10
+            md:gap-8 md:rounded-xl items-start justify-end px-4 pb-10 md:px-10 
           "
           style={{
             backgroundImage:
-              'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://api.deepai.org/job-view-file/7dfceef4-9331-4a64-945f-fc4e135058ef/outputs/output.jpg")',
+              'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://img.freepik.com/free-vector/falling-man-composition_98292-8415.jpg?t=st=1741326776~exp=1741330376~hmac=919953b204a8a991ceb8c6fd1a04377ba8bf0bbf8aab881ea391a63257ae3aa3&w=996")',
+            backgroundSize: "cover",
+            backgroundPosition: "center 30%",  // 👈 Moves the image slightly down
+            backgroundRepeat: "no-repeat",
+            width: "100%",
+            height: "60vh",
           }}
         >
+        
           <div className="flex flex-col gap-2 text-left">
             <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl">
             "Your fall, our call .!"
